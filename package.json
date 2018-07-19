@@ -1,0 +1,31 @@
+{
+  "name": "slack-pr-reminder",
+  "version": "1.0.0",
+  "description": "Send PR reminders to slack channel",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdzevel/slack-pr-reminder.git"
+  },
+  "author": "Boris Dzevel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bdzevel/slack-pr-reminder/issues"
+  },
+  "homepage": "https://github.com/bdzevel/slack-pr-reminder#readme",
+  "scripts": {
+    "precommit": "npm test",
+    "test": "./node_modules/.bin/grunt test",
+    "start": "node --use-strict ./index"
+  },
+  "dependencies": {
+    "dotenv": "^6.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.1.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "grunt": "^1.0.3",
+    "gruntify-eslint": "^5.0.0",
+    "husky": "^0.14.3"
+  }
+}
