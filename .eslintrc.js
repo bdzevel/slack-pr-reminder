@@ -8,6 +8,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'guard-for-in': 'off',
     'no-param-reassign': 'off',
+    'no-console': 'off',
 
     'max-len': ["error", 160],
     'array-bracket-spacing': [ 'error', 'always' ],
