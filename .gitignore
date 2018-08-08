@@ -59,5 +59,7 @@ typings/
 
 .vscode/
 
+deployment-package/
+
 *.yaml
 !template.yaml
