@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  slackprreminder:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: execution-handler.execute
+      Runtime: nodejs8.10
+      CodeUri: .
+      Description: ''
+      MemorySize: 128
+      Timeout: 3
+      Role: 'arn:aws:iam::508593216131:role/lambda_basic_execution'
+      Events:
+        Schedule1:
+          Type: Schedule
+          Properties:
+            Schedule: cron(0 13 ? * MON-FRI *)
+      Environment:
+        Variables:
+          GITHUB_APP_USER_NAME: user
+          GITHUB_APP_USER_PASS: pass
+          GITHUB_ORG_NAME: orgname
+          GITHUB_REPOSITORY: repo
+          SLACK_APP_TOKEN: apptoken
+          SLACK_CHANNEL: channelid
