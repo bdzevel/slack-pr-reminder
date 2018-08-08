@@ -88,7 +88,6 @@ function getPullRequestAttachments(pullRequests) {
       title: cur.title,
       title_link: cur.html_url,
       fields: getAttachmentFields(cur, reviews),
-      footer: 'Slack PR Reminders',
       color: getReviewColor(reviews),
     });
     return acc;
